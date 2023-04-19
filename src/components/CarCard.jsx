@@ -27,7 +27,7 @@ export default function CarCard({car}) {
 
     return (
         <div className="card">
-            <img className="img-fluid selectable" src={car.img} alt="" data-bs-toggle="modal" data-bs-target="#carModal" onClick={setActiveCar} />
+            <img className="img-fluid selectable" src={car.imgUrl} alt="" data-bs-toggle="modal" data-bs-target="#carModal" onClick={setActiveCar} />
             <p className="text-center pt-2"> {car.make} | {car.model} | {car.year} </p>
             <button className="btn btn-danger mb-2 mx-5" onClick={deleteCar}>Delete Car</button>
         </div>

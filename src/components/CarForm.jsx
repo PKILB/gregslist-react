@@ -41,7 +41,7 @@ function CarForm() {
                 </div>
                 <div className="mb-3">
                     <label htmlFor="img" className="form-label">img</label>
-                    <input required type="text" defaultValue={editable.imgUrl} className="form-control" id="img" placeholder="img..." name="imgUrl" onChange={bindEditable} />
+                    <input required type="text" defaultValue={editable.imgUrl} className="form-control" id="imgUrl" placeholder="img..." name="imgUrl" onChange={bindEditable} />
                 </div>
                 <div className="mb-3">
                     <label htmlFor="price" className="form-label">price</label>
