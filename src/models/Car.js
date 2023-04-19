@@ -1,7 +1,7 @@
 export class Car {
     constructor(data = {} ){
         this.id = data.id || ''
-        this.createdAt = data.createdAt || ''
+        // this.createdAt = data.createdAt || ''
         this.description = data.description || ''
         this.img = data.imgUrl || ''
         this.make = data.make || ''

@@ -1,10 +1,12 @@
-import React, { useEffect, useState } from "react";
-import Pop from "../utils/Pop.js";
-import { carsService } from "../services/CarsService.js";
+import { observer } from "mobx-react";
+import React, { useEffect } from "react";
 import { AppState } from "../AppState.js";
 import CarCard from "../components/CarCard.jsx";
+import { Car } from "../models/Car.js";
+import { carsService } from "../services/CarsService.js";
+import Pop from "../utils/Pop.js";
 
-export default function HomePage() {
+  function HomePage() {
   // const [count, setCount] = useState(0)
   async function getCars() {
     try {
@@ -28,7 +30,7 @@ export default function HomePage() {
   },[])
 
   return (
-    <div className="home-page">
+    <section className="home-page">
       <div className="container my-3">
         <div className="row">
           <div className="col-4">
@@ -38,6 +40,10 @@ export default function HomePage() {
           {cars}
         </div>
       </div>
-    </div>
+
+      <div className="modal fade"></div>
+    </section>
   )
 }
+
+export default observer(HomePage)
