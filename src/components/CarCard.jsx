@@ -12,8 +12,8 @@ export default function CarCard({car}) {
     return (
         <div className="card">
             <img src={car.img} alt="" />
-            <p> {car.make} | {car.model} | {car.year} </p>
-            <button className="btn btn-danger">Delete Car</button>
+            <p className="text-center pt-2"> {car.make} | {car.model} | {car.year} </p>
+            <button className="btn btn-danger mb-2 mx-5">Delete Car</button>
         </div>
     )
 }
