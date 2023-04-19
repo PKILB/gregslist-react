@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import Pop from "../utils/Pop.js";
 import { carsService } from "../services/CarsService.js";
+import { AppState } from "../AppState.js";
+import CarCard from "../components/CarCard.jsx";
 
 export default function HomePage() {
   // const [count, setCount] = useState(0)
@@ -12,6 +14,13 @@ export default function HomePage() {
     }
   }
 
+  let cars = (AppState.cars.map(c => {
+    return (
+      <div className="col-md-4" key={c.id}>
+        <CarCard car={c} />
+      </div>
+    )
+  }))
 
 
   useEffect(() => {
@@ -24,6 +33,9 @@ export default function HomePage() {
         <div className="row">
           <div className="col-4">
           </div>
+        </div>
+        <div className="row">
+          {cars}
         </div>
       </div>
     </div>
