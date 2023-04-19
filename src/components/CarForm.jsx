@@ -1,5 +1,5 @@
-import React from 'react';
 import { observer } from 'mobx-react';
+import React from 'react';
 import { AppState } from '../AppState';
 import { Car } from '../models/Car';
 import { BindEditable } from '../utils/FormHandler.js';

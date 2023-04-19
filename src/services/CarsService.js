@@ -4,6 +4,13 @@ import { api } from "./AxiosService"
 
 
 class CarsService {
+
+    async createCar(formData) {
+        const res = await api.post('auth/api/cars', formData)
+        console.log('[create car]', res.data)
+        let actualCar = new Car(res.data)
+        AppState.cars.push(actualCar)
+    }
     
     async deleteCar(carId) {
         const res = await api.delete('auth/api/cars/' + carId)
