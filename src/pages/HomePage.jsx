@@ -16,6 +16,10 @@ import Pop from "../utils/Pop.js";
     }
   }
 
+  function createCar() {
+    AppState.car = new Car({})
+  }
+
   let cars = (AppState.cars.map(c => {
     return (
       <div className="col-md-4" key={c.id}>
@@ -38,6 +42,9 @@ import Pop from "../utils/Pop.js";
         </div>
         <div className="row">
           {cars}
+        </div>
+        <div className="btn btn-info" title="Sell Car" onClick={createCar} data-bs-toggle="modal" data-bs-target="#carModal">
+          <span className="display-6">Car</span>
         </div>
       </div>
 
