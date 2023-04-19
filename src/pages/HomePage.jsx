@@ -5,6 +5,7 @@ import CarCard from "../components/CarCard.jsx";
 import { Car } from "../models/Car.js";
 import { carsService } from "../services/CarsService.js";
 import Pop from "../utils/Pop.js";
+import CarForm from "../components/CarForm.jsx";
 
   function HomePage() {
   // const [count, setCount] = useState(0)
@@ -55,6 +56,7 @@ import Pop from "../utils/Pop.js";
               <h1 className="modal-title fs-5" id="exampleModalLabel">Edit Car</h1>
               <button type="button" className="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
             </div>
+            {AppState.car ? <CarForm /> : null}
           </div>
         </div>
       </div>
